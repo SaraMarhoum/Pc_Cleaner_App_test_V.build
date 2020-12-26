@@ -43,31 +43,30 @@ namespace SmartScanUpdater
                             var client = new WebClient();
 
                             //Thread.Sleep(5000);
-                            string[] files = Directory.GetFiles(@"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release");
+                            string[] files = Directory.GetFiles(@"..\..\..\brief 3\bin\Release");
 
                             foreach (string file in files)
                             {
                                 File.Delete(file);
                             }
                             //if crash , everything lost , best not delate and replace directly 
-                            //File.Delete(@"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release\brief 3.exe");
-                            client.DownloadFile("https://docs.google.com/uc?export=download&id=1QJ6o3cX7W7HYesoHxbgi9Z6CmeQXpvoC", @"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release\Release.zip");
-                            string zipPath = @"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release\Release.zip";
+
+                            client.DownloadFile("https://docs.google.com/uc?export=download&id=122v33IOkdXSitA0ZIEa2FmC7qNmE-09i", @"..\..\..\brief 3\bin\Release\Release.zip");
+                            string zipPath = @"..\..\..\brief 3\bin\Release\Release.zip";
                             //. pour racourcir 
-                            string extractPath = @"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release";
+                            string extractPath = @"..\..\..\brief 3\bin\Release";
                             ZipFile.ExtractToDirectory(zipPath, extractPath);
 
                             // not delate the zip file and leave it as backup by rename
-                            File.Delete(@"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release\Release.zip");
-                            Process.Start(@"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release\brief 3.exe");
-                            this.Close();
+                            File.Delete(@"..\..\..\brief 3\bin\Release\Release.zip");
+                            //Process.Start(@"..\..\..\brief 3\bin\Release\brief 3.exe");
+                            //this.Close();
 
 
 
                             btn_quiter.Visibility = Visibility.Visible;
-                            txt_status.Text = "La mise à jour à été effectuée avec succès !";
+                            txt_status.Text = "Mise à jour terminée !";
                         }
-                        //lbl_CountDownTimer.Text = i.ToString();
 
                     });
                 }
@@ -77,7 +76,7 @@ namespace SmartScanUpdater
         private void btn_quiter_Click(object sender, RoutedEventArgs e)
         {
             Close();
-            Process.Start(@"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Release\brief 3.exe");
+            Process.Start(@"..\..\..\brief 3\bin\Release\brief 3.exe");
         }
 
 

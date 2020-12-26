@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartScanUpdater"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="311.308" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="background6.jpg"/>
@@ -13,7 +13,7 @@
 
         <Image x:Name="img_logo" Height="133"  Source="logo.png" VerticalAlignment="Top" Margin="0,23,-0.4,0" />
 
-        <ProgressBar x:Name="bar_progress" Height="40" Margin="0,40,-0.4,38" Width="600"  Visibility="Hidden" >
+        <ProgressBar x:Name="bar_progress" Margin="142,183,142.6,74.6" Visibility="Hidden" >
             <ProgressBar.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.75">
                     <LinearGradientBrush.RelativeTransform>
@@ -30,7 +30,7 @@
             </ProgressBar.Foreground>
         </ProgressBar>
 
-        <Button x:Name="btn_start"  Content="Commener la mise à jour"  Width="237" Height="42" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="18" Click="btn_start_Click" Margin="0,67,0,0">
+        <Button x:Name="btn_start"  Content="Commener la mise à jour"  Width="237" Height="42" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="18" Click="btn_start_Click" Margin="284,183,272.6,56.6">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.75">
                     <LinearGradientBrush.RelativeTransform>
@@ -47,7 +47,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btn_quiter"  Content="Finir"  Width="151" Height="42" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,41.6,48" Foreground="White" FontWeight="Bold" FontSize="18" Click="btn_quiter_Click" Visibility="Hidden">
+        <Button x:Name="btn_quiter"  Content="Finir"  Width="151" Height="42" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,20.6,9.6" Foreground="White" FontWeight="Bold" FontSize="18" Click="btn_quiter_Click" Visibility="Hidden">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.75">
                     <LinearGradientBrush.RelativeTransform>
@@ -64,7 +64,7 @@
             </Button.Background>
         </Button>
 
-        <TextBlock x:Name="txt_status" Text="Mis à jour en cours..." FontWeight="Bold" Foreground="White" Width="599" Height="35" FontSize="20" VerticalAlignment="Center" Margin="98,252,96.6,133" TextAlignment="Center" TextWrapping="Wrap" Visibility="Hidden" />
+        <TextBlock x:Name="txt_status" Text="Mis à jour en cours..." FontWeight="Bold" Foreground="White" Height="35" FontSize="20" VerticalAlignment="Center" Margin="231,234,231.6,12.6" TextAlignment="Center" TextWrapping="Wrap" Visibility="Hidden" />
 
     </Grid>
 </Window>
