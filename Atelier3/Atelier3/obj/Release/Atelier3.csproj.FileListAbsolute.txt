@@ -1,0 +1,14 @@
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\bin\Release\Atelier3.exe.config
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\bin\Release\Atelier3.exe
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\bin\Release\Atelier3.pdb
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\MainWindow.g.cs
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\App.g.cs
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3_MarkupCompile.cache
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3_MarkupCompile.lref
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\MainWindow.baml
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3.g.resources
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3.Properties.Resources.resources
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3.csproj.GenerateResource.cache
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3.csproj.CoreCompileInputs.cache
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3.exe
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Release\Atelier3.pdb

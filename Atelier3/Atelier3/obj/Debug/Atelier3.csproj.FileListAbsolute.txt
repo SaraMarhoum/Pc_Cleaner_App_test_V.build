@@ -1,0 +1,15 @@
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3.csprojAssemblyReference.cache
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\MainWindow.g.cs
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\App.g.cs
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3_MarkupCompile.cache
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3_MarkupCompile.lref
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\bin\Debug\Atelier3.exe.config
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\bin\Debug\Atelier3.exe
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\bin\Debug\Atelier3.pdb
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\MainWindow.baml
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3.g.resources
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3.Properties.Resources.resources
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3.csproj.GenerateResource.cache
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3.csproj.CoreCompileInputs.cache
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3.exe
+C:\Users\Youcode\source\repos\Atelier3\Atelier3\obj\Debug\Atelier3.pdb
