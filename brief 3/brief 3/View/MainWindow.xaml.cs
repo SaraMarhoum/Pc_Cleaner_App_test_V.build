@@ -30,14 +30,14 @@ namespace brief_3
 
 
             //Display last analyse date in top of app using split read last line
-            string wktA = File.ReadLines(@"..\History\Analyse.txt").Last();
+            string wktA = File.ReadLines(@".\AnalyseTop.txt").Last();
             string[] dateA = wktA.Split(';');
             string ladateA = dateA[1];
             txt_last_analyse.Text = "Dernière analyse   : " + ladateA;
 
 
             //Display last analyse date in top of app using split read last line
-            string wktD = File.ReadLines(@"..\History\Delete.txt").Last();
+            string wktD = File.ReadLines(@".\Delete.txt").Last();
             string[] dateB = wktD.Split(';');
             string ladateD = dateB[1];
             txt_last_maj.Text = "Dernier nettoyage : " + ladateD;
@@ -97,7 +97,7 @@ namespace brief_3
 
                     for (int i = 0; i <= fileCount + 1; i++)
                     {
-                        Thread.Sleep(500);
+                        Thread.Sleep(50);
                         this.Dispatcher.Invoke(() => //Use Dispather to Update UI Immediately  
                         {
 
@@ -133,15 +133,18 @@ namespace brief_3
 
                                 var size = di.EnumerateFiles("*.*", SearchOption.AllDirectories).Sum(fi => fi.Length);
                                 txt_espace_a_nett.Text = $"Espace à nettoyer :  {size} Octets";
-
-                                txt_last_analyse.Text = "Dernière analyse   ; " + DateTime.Now.ToString();
+                                txt_last_analyse.Text = "Dernière analyse   : " + DateTime.Now.ToString();
 
 
                                 //Add record to history
-                                File.AppendAllText(@"..\History\Analyse.txt", "Analyse réalisée le ; " + DateTime.Now.ToString() + Environment.NewLine);
+                                File.AppendAllText(@".\histo.txt", "Analyse réalisée le ; " + DateTime.Now.ToString() + Environment.NewLine);
 
+                                //Pass the filepath and filename to the StreamWriter Constructor
+                                StreamWriter sw = new StreamWriter(@".\AnalyseTop.txt");
+                                //Write a line of text
+                                sw.WriteLine("Analyse réalisée le ; " + DateTime.Now.ToString());
                                 //Close the file
-                                //sw.Close();
+                                sw.Close();
 
                                 txt_analyse.Text = "Analyse terminée !";
                                 btn_analyse.Visibility = Visibility.Hidden;
@@ -214,7 +217,7 @@ namespace brief_3
 
                     for (int i = 0; i <= fileCount + 1; i++)
                     {
-                        Thread.Sleep(500);
+                        Thread.Sleep(50);
                         this.Dispatcher.Invoke(() => //Use Dispather to Update UI Immediately  
                         {
 
@@ -273,13 +276,18 @@ namespace brief_3
                                 // Get a reference to each file in that directory.
                                 FileInfo[] fiArr = di.GetFiles("*.*", SearchOption.AllDirectories);
                                 var size = di.EnumerateFiles("*.*", SearchOption.AllDirectories).Sum(fi => fi.Length);
-
                                 txt_espace_a_nett.Text = $"Espace à nettoyer :  {size} Octets";
+                                txt_last_maj.Text = "Dernier nettoyage : " + DateTime.Now.ToString();
 
-                                txt_last_maj.Text = "Dernier nettoyage ; " + DateTime.Now.ToString();
+                                //Add record to history
+                                File.AppendAllText(@".\histo.txt", "Nettoyage réalisée le ; " + DateTime.Now.ToString() + Environment.NewLine);
 
-                                //Keep record in histo
-                                File.AppendAllText(@"..\History\Delete.txt", "Nettoyage réalisé le ; " + DateTime.Now.ToString() + Environment.NewLine);
+                                //Pass the filepath and filename to the StreamWriter Constructor
+                                StreamWriter sww = new StreamWriter(@".\Delete.txt");
+                                //Write a line of text
+                                sww.WriteLine("Nettoyage réalisé le ; " + DateTime.Now.ToString());
+                                //Close the file
+                                sww.Close();
 
 
                                 txt_analyse.Text = "Nettoyage terminé !";
@@ -354,7 +362,7 @@ namespace brief_3
 
                     for (int i = 0; i <= fileCount + 1; i++)
                     {
-                        Thread.Sleep(500);
+                        Thread.Sleep(50);
                         this.Dispatcher.Invoke(() => //Use Dispather to Update UI Immediately  
                         {
 
@@ -390,15 +398,18 @@ namespace brief_3
 
                                 var size = di.EnumerateFiles("*.*", SearchOption.AllDirectories).Sum(fi => fi.Length);
                                 txt_espace_a_nett.Text = $"Espace à nettoyer :  {size} Octets";
-
-                                txt_last_analyse.Text = "Dernière analyse   ; " + DateTime.Now.ToString();
+                                txt_last_analyse.Text = "Dernière analyse   : " + DateTime.Now.ToString();
 
 
                                 //Add record to history
-                                File.AppendAllText(@"..\History\Analyse.txt", "Analyse réalisée le ; " + DateTime.Now.ToString() + Environment.NewLine);
+                                File.AppendAllText(@".\histo.txt", "Analyse réalisée le ; " + DateTime.Now.ToString() + Environment.NewLine);
 
+                                //Pass the filepath and filename to the StreamWriter Constructor
+                                StreamWriter sw = new StreamWriter(@".\AnalyseTop.txt");
+                                //Write a line of text
+                                sw.WriteLine("Analyse réalisée le ; " + DateTime.Now.ToString());
                                 //Close the file
-                                //sw.Close();
+                                sw.Close();
 
                                 txt_analyse.Text = "Analyse terminée !";
                                 btn_analyse.Visibility = Visibility.Hidden;
@@ -440,9 +451,9 @@ namespace brief_3
 
 
             //Creer Histo
-            string[] files = { @"..\History\Analyse.txt", @"..\History\Delete.txt" };
+            /*string[] files = { @".\Analyse.txt", @".\Delete.txt" };
 
-            FileStream outputFile = new FileStream(@"..\History\histo.txt", FileMode.Create);
+            FileStream outputFile = new FileStream(@".\histo.txt", FileMode.Create);
 
             using (BinaryWriter ws = new BinaryWriter(outputFile))
             {
@@ -451,12 +462,12 @@ namespace brief_3
 
                     txt_output.Items.Add(File.ReadAllText(file)); ;
                 }
-            }
+            }*/
 
             String line;
 
             //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader(@"..\History\histo.txt");
+            StreamReader sr = new StreamReader(@".\histo.txt");
 
             //Read the first line of text
             line = sr.ReadLine();
@@ -490,24 +501,10 @@ namespace brief_3
             btn_clear__histo.Visibility = Visibility.Visible;
 
 
-            //Creer Histo
-            string[] files = { @"..\History\Analyse.txt", @"..\History\Delete.txt" };
-
-            FileStream outputFile = new FileStream(@"..\History\histo.txt", FileMode.Create);
-
-            using (BinaryWriter ws = new BinaryWriter(outputFile))
-            {
-                foreach (string file in files)
-                {
-
-                    txt_output.Items.Add(File.ReadAllText(file)); ;
-                }
-            }
-
             String line;
 
             //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader(@"..\History\histo.txt");
+            StreamReader sr = new StreamReader(@".\histo.txt");
 
             //Read the first line of text
             line = sr.ReadLine();
@@ -581,9 +578,7 @@ namespace brief_3
         {
             txt_output.Items.Clear();
 
-            //File.WriteAllText(@"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\History\Analyse.txt", string.Empty);
-            //File.WriteAllText(@"C:\Users\Youcode\source\repos\brief 3\brief 3\bin\History\Delete.txt", string.Empty);
-            File.WriteAllText(@"..\History\histo.txt", string.Empty);
+            File.WriteAllText(@".\histo.txt", string.Empty);
         }
 
 
@@ -611,28 +606,22 @@ namespace brief_3
         // Oppen the updater app
         private void btn_majGrid_Click(object sender, RoutedEventArgs e)
         {
-
-
             WebClient webClient = new WebClient();
 
-           
-                if (!webClient.DownloadString("https://pastebin.com/sWt7jMj3").Contains("v0.0.0"))
-                {
-                    if (System.Windows.Forms.MessageBox.Show("Looks like there is an update! Do you want to download it?", "Demo", MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes) using (var client = new WebClient())
 
-                        {
-                            Process.Start(@"..\..\..\SmartScanUpdater\bin\Release\SmartScanUpdater.exe");
-                            
-                            this.Close();
-                        }
-                }
-                else
-                {
-                    System.Windows.Forms.MessageBox.Show("Vous êtes déjà à jour !");
-                }
-            
-            
+            if (!webClient.DownloadString("https://pastebin.com/sWt7jMj3").Contains("v0.0.0"))
+            {
+                if (System.Windows.Forms.MessageBox.Show("Looks like there is an update! Do you want to download it?", "Demo", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes) using (var client = new WebClient())
+                    {
+                        Process.Start("SmartScanUpdater.exe");
+                        this.Close();
+                    }
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Vous êtes déjà à jour !");
+            }
         }
     }
 }

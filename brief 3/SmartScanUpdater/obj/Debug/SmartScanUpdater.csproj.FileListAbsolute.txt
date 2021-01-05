@@ -12,3 +12,4 @@ C:\Users\Youcode\source\repos\brief 3\SmartScanUpdater\obj\Debug\SmartScanUpdate
 C:\Users\Youcode\source\repos\brief 3\SmartScanUpdater\obj\Debug\SmartScanUpdater.csproj.CoreCompileInputs.cache
 C:\Users\Youcode\source\repos\brief 3\SmartScanUpdater\obj\Debug\SmartScanUpdater.exe
 C:\Users\Youcode\source\repos\brief 3\SmartScanUpdater\obj\Debug\SmartScanUpdater.pdb
+C:\Users\Youcode\source\repos\brief 3\SmartScanUpdater\obj\Debug\SmartScanUpdater.csprojAssemblyReference.cache

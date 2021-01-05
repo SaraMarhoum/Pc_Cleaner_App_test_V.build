@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "brief 3", "brief 3\brief 3.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartScanUpdater", "SmartScanUpdater\SmartScanUpdater.csproj", "{F20FFBEF-CCD1-4337-8C00-D358115A7D0C}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SmartScanSetup", "SmartScanSetup\SmartScanSetup.vdproj", "{46FD6BDD-1DAD-416D-9D8F-8248BB5271D5}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SSsetup", "SSsetup\SSsetup.vdproj", "{A149125E-6846-44E1-930F-C5E636294FDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +23,8 @@ Global
 		{F20FFBEF-CCD1-4337-8C00-D358115A7D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F20FFBEF-CCD1-4337-8C00-D358115A7D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F20FFBEF-CCD1-4337-8C00-D358115A7D0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46FD6BDD-1DAD-416D-9D8F-8248BB5271D5}.Debug|Any CPU.ActiveCfg = Debug
-		{46FD6BDD-1DAD-416D-9D8F-8248BB5271D5}.Release|Any CPU.ActiveCfg = Release
+		{A149125E-6846-44E1-930F-C5E636294FDC}.Debug|Any CPU.ActiveCfg = Debug
+		{A149125E-6846-44E1-930F-C5E636294FDC}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

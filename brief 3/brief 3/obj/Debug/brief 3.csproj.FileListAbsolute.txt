@@ -41,3 +41,4 @@ C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Debug\System.Numerics.Vectors.
 C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Debug\System.Resources.Extensions.xml
 C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Youcode\source\repos\brief 3\brief 3\bin\Debug\System.Threading.Tasks.Dataflow.xml
+C:\Users\Youcode\source\repos\brief 3\brief 3\obj\Debug\brief 3.csprojAssemblyReference.cache

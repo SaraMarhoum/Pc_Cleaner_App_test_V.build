@@ -1,11 +1,11 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.IO.Compression;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Net;
-using System.IO;
-using System.IO.Compression;
-using System;
 
 
 namespace SmartScanUpdater
@@ -43,26 +43,40 @@ namespace SmartScanUpdater
                             var client = new WebClient();
 
                             //Thread.Sleep(5000);
-                            string[] files = Directory.GetFiles(@"..\..\..\brief 3\bin\Release");
+                            string[] files = Directory.GetFiles(@".\");
 
-                            foreach (string file in files)
+                            try
                             {
-                                File.Delete(file);
-                            }
-                            //if crash , everything lost , best not delate and replace directly 
+                                foreach (string file in files)
+                                {
+                                    try
+                                    {
+                                        File.Delete(file);
 
-                            client.DownloadFile("https://docs.google.com/uc?export=download&id=122v33IOkdXSitA0ZIEa2FmC7qNmE-09i", @"..\..\..\brief 3\bin\Release\Release.zip");
-                            string zipPath = @"..\..\..\brief 3\bin\Release\Release.zip";
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Console.WriteLine(ex.Message);
+
+                                    }
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.Message);
+
+                            }
+                        //if crash , everything lost , best not delate and replace directly 
+                            client.DownloadFile("https://docs.google.com/uc?export=download&id=1ZZLFZEPnC15oMSm2dAHwUNPEhdJohhbO", @"Release.zip");
+                            string zipPath = @".\Release.zip";
                             //. pour racourcir 
-                            string extractPath = @"..\..\..\brief 3\bin\Release";
+                            string extractPath = @".\";
                             ZipFile.ExtractToDirectory(zipPath, extractPath);
 
                             // not delate the zip file and leave it as backup by rename
-                            File.Delete(@"..\..\..\brief 3\bin\Release\Release.zip");
+                            File.Delete(@".\Release.zip");
                             //Process.Start(@"..\..\..\brief 3\bin\Release\brief 3.exe");
                             //this.Close();
-
-
 
                             btn_quiter.Visibility = Visibility.Visible;
                             txt_status.Text = "Mise à jour terminée !";
@@ -76,7 +90,7 @@ namespace SmartScanUpdater
         private void btn_quiter_Click(object sender, RoutedEventArgs e)
         {
             Close();
-            Process.Start(@"..\..\..\brief 3\bin\Release\brief 3.exe");
+            Process.Start(@".\brief 3.exe");
         }
 
 

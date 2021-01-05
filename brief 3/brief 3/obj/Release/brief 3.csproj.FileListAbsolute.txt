@@ -41,4 +41,3 @@ C:\Users\Youcode\source\repos\brief 3\brief 3\obj\Release\brief 3.csproj.CoreCom
 C:\Users\Youcode\source\repos\brief 3\brief 3\obj\Release\brief 3.csproj.CopyComplete
 C:\Users\Youcode\source\repos\brief 3\brief 3\obj\Release\brief 3.exe
 C:\Users\Youcode\source\repos\brief 3\brief 3\obj\Release\brief 3.pdb
-C:\Users\Youcode\source\repos\brief 3\brief 3\obj\Release\brief 3.csprojAssemblyReference.cache
